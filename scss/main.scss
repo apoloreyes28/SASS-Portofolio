@@ -1,4 +1,5 @@
 @import 'config';
+@import 'home';
 
 body {
     background-color: $primary-color;
@@ -34,19 +35,20 @@ main {
         position: fixed;
         bottom: 1rem;
         left: 1rem;
-    }
-
-    a {
-        padding: 0.4rem;
-
-        &:hover {
-            color: $secondary-color;
+    
+        a {
+            padding: 0.4rem;
+    
+            &:hover {
+                color: $secondary-color;
+            }
         }
     }
 }
 
 footer {
     font-size: 1rem;
+    
     position: fixed;
     bottom: 0.4rem;
     right: 1rem;
