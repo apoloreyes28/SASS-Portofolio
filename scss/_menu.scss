@@ -1,0 +1,60 @@
+.menu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+
+    width: 28px;
+    height: 20px;
+
+    cursor: pointer;
+    @include transtition-ease;
+
+    &__burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+
+        width: 28px;
+        height: 3px;
+        background: set-text-color($primary-color);
+
+        @include transtition-ease;
+
+        // usamos un pseudo-elemento para crear 2 líneas y 
+        // asi crear un menu hamburguesa ☰
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: -8px;
+
+            width: 28px;
+            height: 3px; 
+
+            background: set-text-color($primary-color);
+            @include transtition-ease;
+        }
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 8px;
+
+            width: 28px;
+            height: 3px; 
+
+            background: set-text-color($primary-color);
+            @include transtition-ease;
+        }
+
+        // esta clase se va agregar y remover usando JS (add / remove)
+        // para abrir y cerrar esta menu hamburguesa
+        &.open {
+            transform: rotate(720deg);
+
+            background: transparent;
+        }
+    }
+}

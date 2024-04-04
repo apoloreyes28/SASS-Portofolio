@@ -6,3 +6,17 @@ $secondary-color: #ff652f;
     padding: 0;
     box-sizing: border-box;
 }
+
+@mixin transtition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        // si la luminosidad es mayor que el 40%
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
