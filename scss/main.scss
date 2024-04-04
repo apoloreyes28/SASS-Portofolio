@@ -39,7 +39,7 @@ main {
     
         a {
             padding: 0.4rem;
-            @include transtition-ease;
+            @include transition-ease;
     
             &:hover {
                 color: $secondary-color;
